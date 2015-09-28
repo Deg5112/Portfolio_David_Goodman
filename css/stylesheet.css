@@ -1,0 +1,25 @@
+.jumbotron{
+    background-image: url("../images/laguna.jpg");
+    padding-bottom: 535px;
+    color: white;
+    position: relative;
+}
+
+.jumbotron .container{
+    position: absolute;
+    top:50%;
+    margin-top: -72px;
+
+}
+
+
+header{
+    margin-bottom: -20px;
+}
+.navbar-inner{
+    background-color:
+}
+
+#experience.list-group{
+    list-style: none
+}
