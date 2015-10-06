@@ -1,3 +1,4 @@
+
 .jumbotron{
     background-image: url("../images/laguna.jpg");
     padding-bottom: 535px;
@@ -29,7 +30,7 @@ header{
 }
 
 .navbar-nav {
-    margin: 0 0px;
+    margin: 0 0;
     display: inline-block;
 }
 
@@ -39,19 +40,156 @@ header{
 }
 .navbar-inverse{
     background-color: transparent;
-    background-image: -webkit-linear-gradient(top,rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
-    background-image: -o-linear-gradient(top,rgb(110,28,28) 0,rgba(10, 7, 7, 0.72), 100%);
-    background-image: -webkit-gradient(linear,left top,left bottom,from(rgb(110,28,28),to(rgba(10, 7, 7, 0.72)));
-    background-image: linear-gradient(to bottom,rgb(110,28,28) 0,rgba(10, 7, 7, 0.72), 100%);
+    background-image: -webkit-linear-gradient(top, rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
+    background-image: -o-linear-gradient(top, rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
+    background-image: -webkit-gradient(linear, left top,left bottom, from(rgb(110,28,28)) ,to(rgba(10, 7, 7, 0.72)));
+    background-image: linear-gradient(to bottom,rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
 }
 
-.test{
-    width:500px;
-    height:500px;
-    border: 5px solid green;
+div#project-1 {
+    background-color: gray;
+    height: 300px;
+    background-image: url("../images/pic1.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+
+figure{
+    position: relative;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    overflow: hidden;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+#pic1 img{
+    height: 390px;
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+#pic1>figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding:3em;
+    color: white
+}
+
+#pic1>figcaption>h2 {
+    padding-top: 5%;
+    text-shadow: 2px 2px black;
+}
+
+#pic1>figcaption>p {
+    padding-top: 17%;
+    opacity: 0;
+    transition: opacity 1.5s, transform 1.5s;
+    font-size: 2vw;
+    text-shadow: 2px 2px black;
 
 }
-.test:hover{
-    transform: scale(0, 0);
+
+
+#pic1>figcaption::before {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    content: '';
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    bottom: 50px;
+    top: 50px;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition:1.5s;
+
 }
+
+
+
+#pic1>figcaption::after {
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    right: 50px;
+    bottom: 30px;
+    transform: scaleY(0);
+    transition: 1.5s;
+    transform-origin: 0 0;
+}
+
+#pic1:hover img{
+    transform: translateY(-8%);
+    opacity: .85;
+}
+
+#pic1:hover>figcaption::after {
+    transform:scaleY(1);
+}
+
+#pic1:hover>figcaption::before {
+    transform:scaleX(1);
+}
+
+#pic1:hover>figcaption>p{
+    opacity: 1;
+    transform: translateY(-60%);
+}
+
+#pic2{
+    color:white;
+    text-shadow: 2px 2px black;
+}
+
+#pic2>figcaption {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+}
+
+#pic2>img{
+    transition: transform 2s;
+}
+
+#pic2>figcaption::before {
+    content: 'with Harvery, Andrew, and Grace';
+    border: 3px solid white;
+    position: absolute;
+    left: 70%;
+    bottom: -10%;
+    top: 55%;
+    right: -10%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1.5s;
+    transform-origin: 100% 100%;
+
+}
+
+#pic2:hover>figcaption::before{
+    transform: scale(1.2) ;
+
+}
+
+#pic2:hover>img{
+    transform:translate(-4%, -4%);
+}
+
+
 
