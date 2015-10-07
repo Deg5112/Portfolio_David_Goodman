@@ -1,0 +1,201 @@
+/*<header><!--header-->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar"><!--nav-->
+<div class="navbar-inner">
+<div class="container">
+<div class="navbar-header"><!--navbar header for button and brand-->
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<a href="index.html" class="navbar-brand active">David Goodman</a>
+</div><!--navheader end-->
+<div class="collapse navbar-collapse" id="nav-collapse">
+<a href="#contact" class="btn btn-info navbar-btn navbar-right">Contact</a>
+<!--navbar navigation-->
+<ul class="nav navbar-nav">
+<li><a href="#portfolio">Work</a></li>*/
+.h2 {
+  padding-top: 5%;
+  text-shadow: 2px 2px black;
+}
+.figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 3em;
+}
+.pic {
+  position: relative;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+header {
+  margin-bottom: -20px;
+}
+header .navbar-inverse {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(top, #6e1c1c 0, rgba(10, 7, 7, 0.72) 100%);
+  background-image: -o-linear-gradient(top, #6e1c1c 0, rgba(10, 7, 7, 0.72) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6e1c1c), to(rgba(10, 7, 7, 0.72)));
+  background-image: linear-gradient(to bottom, #6e1c1c 0, rgba(10, 7, 7, 0.72) 100%);
+}
+header .navbar-inverse .nav {
+  margin: 0 0;
+  display: inline-block;
+}
+header .navbar-inverse .nav li {
+  position: relative;
+  display: inline-block;
+}
+.jumbotron {
+  background-image: url("images/laguna.jpg");
+  padding-bottom: 535px;
+  color: white;
+  position: relative;
+}
+.jumbotron .container {
+  position: absolute;
+  top: 50%;
+  margin-top: -72px;
+}
+#portfolio .row .col-md-5 {
+  margin: 3% 0;
+}
+#portfolio .row .col-md-5 #pic1 {
+  position: relative;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+#portfolio .row .col-md-5 #pic1 img {
+  height: 390px;
+  transition: opacity 1.5s, transform 1.5s;
+}
+#portfolio .row .col-md-5 #pic1:hover > img {
+  transform: translateY(-8%);
+  opacity: .85;
+}
+#portfolio .row .col-md-5 #pic1:hover > figcaption::before {
+  transform: scaleX(1);
+}
+#portfolio .row .col-md-5 #pic1:hover > figcaption::after {
+  transform: scaleY(1);
+}
+#portfolio .row .col-md-5 #pic1:hover p {
+  opacity: 1;
+  transform: translateY(-60%);
+}
+#portfolio .row .col-md-5 #pic1 figcaption::before {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  content: '';
+  position: absolute;
+  right: 30px;
+  left: 30px;
+  bottom: 50px;
+  top: 50px;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: 1.5s;
+}
+#portfolio .row .col-md-5 #pic1 figcaption::after {
+  border-right: 3px solid white;
+  border-left: 3px solid white;
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  right: 50px;
+  bottom: 30px;
+  transform: scaleY(0);
+  transition: 1.5s;
+  transform-origin: 0 0;
+}
+#portfolio .row .col-md-5 #pic1 figcaption {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3em;
+}
+#portfolio .row .col-md-5 #pic1 figcaption h2 {
+  padding-top: 5%;
+  text-shadow: 2px 2px black;
+}
+#portfolio .row .col-md-5 #pic1 figcaption p {
+  padding-top: 17%;
+  opacity: 0;
+  transition: opacity 1.5s, transform 1.5s;
+  font-size: 2vw;
+  text-shadow: 2px 2px black;
+}
+#portfolio .row .col-md-5 #pic2 {
+  position: relative;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+#portfolio .row .col-md-5 #pic2:hover > figcaption::before {
+  transform: scale(1.2);
+}
+#portfolio .row .col-md-5 #pic2 img {
+  transition: transform 2s;
+}
+#portfolio .row .col-md-5 #pic2 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 3em;
+}
+#portfolio .row .col-md-5 #pic2 figcaption::before {
+  content: 'with Harvery, Andrew, and Grace';
+  border: 3px solid white;
+  position: absolute;
+  left: 70%;
+  bottom: -10%;
+  top: 55%;
+  right: -10%;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.5s;
+  transform-origin: 100% 100%;
+}
+#portfolio .row .col-md-5 #pic2 h2 {
+  padding-top: 5%;
+  text-shadow: 2px 2px black;
+}
