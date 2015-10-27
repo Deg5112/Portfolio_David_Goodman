@@ -1,26 +1,13 @@
-/*<header><!--header-->
-<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar"><!--nav-->
-<div class="navbar-inner">
-<div class="container">
-<div class="navbar-header"><!--navbar header for button and brand-->
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-
-<a href="index.html" class="navbar-brand active">David Goodman</a>
-</div><!--navheader end-->
-<div class="collapse navbar-collapse" id="nav-collapse">
-<a href="#contact" class="btn btn-info navbar-btn navbar-right">Contact</a>
-<!--navbar navigation-->
-<ul class="nav navbar-nav">
-<li><a href="#portfolio">Work</a></li>*/
-//variables and classes
 @image: 'images/';
+@pic-border:2px solid white;
 
-
+.navbar_color{
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(top, rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
+  background-image: -o-linear-gradient(top, rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
+  background-image: -webkit-gradient(linear, left top,left bottom, from(rgb(110,28,28)) ,to(rgba(10, 7, 7, 0.72)));
+  background-image: linear-gradient(to bottom,rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
+}
 .h2{
   padding-top: 5%;
   text-shadow: 2px 2px black;
@@ -51,16 +38,13 @@
 
 }
                     //variables and classes end
+
 //header begin
 header {
    margin-bottom:-20px;
 
   .navbar-inverse{
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(top, rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
-    background-image: -o-linear-gradient(top, rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
-    background-image: -webkit-gradient(linear, left top,left bottom, from(rgb(110,28,28)) ,to(rgba(10, 7, 7, 0.72)));
-    background-image: linear-gradient(to bottom,rgb(110,28,28) 0,rgba(10, 7, 7, 0.72) 100%);
+    .navbar_color;
 
       .nav{
         margin:0 0;
@@ -116,8 +100,8 @@ header {
           }
         }
           figcaption::before {
-            border-top: 3px solid white;
-            border-bottom: 3px solid white;
+            border-top: @pic-border;
+            border-bottom: @pic-border;
             content: '';
             position: absolute;
             right: 30px;
@@ -129,8 +113,8 @@ header {
             transition:1.5s;
           }
           figcaption::after {
-            border-right: 3px solid white;
-            border-left: 3px solid white;
+            border-right: @pic-border;
+            border-left: @pic-border;
             content: '';
             position: absolute;
             top: 30px;
@@ -169,32 +153,56 @@ header {
         .pic;
         &:hover{
           &>figcaption::before{
-            transform: scale(1.2)
+            transform: scale(1.7);
+            opacity: 1;
+          }
+          & p{
+            transform: translate3d(-22%, -135%, 0);
+            opacity: 1;
+          }
+          &>img{
+            transform: translate3d(-18%, -10%, 0);
           }
         }
           img{
-            transition: transform 2s;
+            transition: transform .5s;
+            opacity:.9;
           }
           figcaption{
             .figcaption;
 
+
             &::before{
-              content: 'with Harvery, Andrew, and Grace';
-              border: 3px solid white;
+              content: '';
+              border: @pic-border;
               position: absolute;
-              left: 70%;
+              left: 77%;
               bottom: -10%;
-              top: 55%;
+              top: 72%;
               right: -10%;
               border-radius: 50%;
-              transform: scale(0);
-              transition: transform 1.5s;
+              opacity: 1;
+              transform: scale(1);
+              transition: transform .5s;
               transform-origin: 100% 100%;
+              box-shadow: 0 0 0 900px rgba(226, 225, 225, 0.15);
             }
           }
             h2{
               .h2;
             }
+            p
+            {
+              position: relative;
+              left: 60%;
+              top: 70%;
+              transform: scale(1);
+              opacity: 0;
+              transition: .5s;
+              transform-origin: 100% 100%;
+
+            }
+
       }
     }
   }
