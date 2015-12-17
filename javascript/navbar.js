@@ -8,7 +8,9 @@ function navbarControls(){
     //    }
     //});
 
-    $('.container, .jumbotron').click(function() {
+    $('.container, .jumbotron').click(function(event) {
+        var pics = $('figure a');
+
         if(event.clientY<54){
             return;
         }
