@@ -33,8 +33,9 @@
   background: #3085a3;
   text-align: center;
   cursor: pointer;
-  color:white;
+  color: white;
   text-shadow: 2px 2px black;
+  box-shadow: 0px 1px 29px black;
 
 }
                     //variables and classes end
@@ -76,13 +77,12 @@ header {
   .row {
     .col-md-5 { //col begin
       margin: 3% 0;
+
       //pic1
       #pic1 {
         .pic;
-          img{
-            height: 390px;
-            transition: opacity 1.5s, transform 1.5s;
-          }
+
+
         &:hover{
           &>img {
             transform: translateY(-8%);
@@ -209,7 +209,20 @@ header {
 }
 
 
-
+#portfolio .row .col-md-5 figure {
+  position: relative !important;
+  margin: 10px 1% !important;
+  min-width: 320px !important;
+  max-width: 480px !important;
+  max-height: 360px !important;
+  overflow: hidden !important;
+  background: #3085a3 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+  box-shadow: 0px 1px 29px black !important;
+}
 
 
 

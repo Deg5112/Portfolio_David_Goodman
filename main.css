@@ -60,9 +60,10 @@ header .navbar-inverse .nav li {
   position: absolute;
   top: 50%;
   margin-top: -72px;
+  text-shadow: 1px 1px black !important;
 }
 #portfolio .row .col-md-5 {
-  margin: 3% 0;
+  margin: 1% 4%;
 }
 #portfolio .row .col-md-5 #pic1 {
   position: relative;
@@ -76,6 +77,8 @@ header .navbar-inverse .nav li {
   cursor: pointer;
   color: white;
   text-shadow: 2px 2px black;
+  box-shadow: 0px 1px 29px black !important;
+  border-radius: 5px;
 }
 #portfolio .row .col-md-5 #pic1 img {
   height: 390px;
@@ -142,17 +145,19 @@ header .navbar-inverse .nav li {
   text-shadow: 2px 2px black;
 }
 #portfolio .row .col-md-5 #pic2 {
-  position: relative;
-  margin: 10px 1%;
-  min-width: 320px;
-  max-width: 480px;
-  max-height: 360px;
-  overflow: hidden;
-  background: #3085a3;
-  text-align: center;
-  cursor: pointer;
-  color: white;
-  text-shadow: 2px 2px black;
+  position: relative !important;
+  margin: 10px 1% !important;
+  min-width: 320px !important;
+  max-width: 480px !important;
+  max-height: 360px !important;
+  overflow: hidden !important;
+  background: #3085a3 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+  box-shadow: 0px 1px 29px black !important;
+  border-radius: 5px;
 }
 #portfolio .row .col-md-5 #pic2:hover > figcaption::before {
   transform: scale(1.7);
